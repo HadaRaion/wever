@@ -1,0 +1,113 @@
+.pr-list-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.pr-list {
+	display: flex;
+	align-items: center;
+	margin-top: 15rem;
+
+	@include atLarge {
+		flex-direction: column;
+		align-items: baseline;
+		width: 85%;
+	}
+
+	@include atSmall {
+		width: 100%;
+		margin-top: 8rem;
+	}
+
+	&__desc {
+		width: 55%;
+
+		@include atLarge {
+			width: 100%;
+			margin-top: 2rem;
+		}
+
+		@include atSmall {
+			margin-top: 1rem;
+		}
+
+		h2 {
+			margin-top: 2rem;
+
+			@include atLarge {
+				margin-top: 1rem;
+
+				/* & > .break-line {
+					display: inline;
+				} */
+			}
+
+			@include atSmall {
+				margin-top: 1rem;
+			}
+		}
+		p {
+			margin-top: 3rem;
+			line-height: 1.5;
+			@include atLarge {
+				margin-top: 1rem;
+			}
+
+			@include atSmall {
+				margin-top: 1rem;
+			}
+		}
+		.btn-sm {
+			margin-top: 3rem;
+			@include atLarge {
+				margin-top: 1.5rem;
+			}
+
+			@include atSmall {
+				margin-top: 1rem;
+			}
+		}
+	}
+	&__image {
+		width: 45%;
+
+		@include atLarge {
+			width: 500px;
+		}
+
+		@include atSmall {
+			width: 100%;
+			margin-bottom: 3rem;
+		}
+		> img {
+		}
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:nth-child(even) {
+		.pr-list__desc {
+			order: 2;
+			margin-left: 4rem;
+
+			@include atLarge {
+				margin-left: 0;
+			}
+		}
+	}
+	&:nth-child(odd) {
+		@include atLarge {
+			align-self: flex-end;
+		}
+		.pr-list__desc {
+			margin-right: 4rem;
+
+			@include atLarge {
+				order: 2;
+				margin-right: 0rem;
+			}
+		}
+	}
+}

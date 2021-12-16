@@ -1,0 +1,119 @@
+.how-it-works {
+	&__detail {
+	}
+
+	&__list {
+		& > li {
+			display: flex;
+			align-items: center;
+			margin-bottom: 5rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@include atSmall {
+				flex-direction: column;
+			}
+
+			&:nth-child(even) > .text {
+				order: 2;
+			}
+
+			&:nth-child(even) > .image {
+				margin-right: 10rem;
+				@include atSmall {
+					margin: 2rem 0;
+				}
+			}
+
+			&:nth-child(odd) > .image {
+				margin-left: 10rem;
+				@include atSmall {
+					margin: 2rem 0;
+				}
+			}
+		}
+
+		.text {
+			color: $darkgray;
+
+			@include atSmall {
+				order: 2;
+			}
+
+			h2 {
+				color: $black;
+			}
+
+			h4 {
+				font-weight: 400;
+				margin: 6rem 0;
+
+				@include atMedium {
+					margin: 3rem 0;
+				}
+
+				@include atSmall {
+					margin: 2rem 0;
+				}
+			}
+
+			h6 {
+				margin-bottom: 0.5rem;
+
+				@include atMedium {
+					margin-bottom: 0.3rem;
+				}
+
+				@include atSmall {
+					margin-bottom: 0.2rem;
+				}
+			}
+
+			ul.bullet-list {
+				margin-top: 6rem;
+				list-style: disc;
+				padding-inline-start: 40px;
+
+				@include atMedium {
+					margin-top: 3rem;
+					padding-inline-start: 20px;
+					font-size: 1rem;
+				}
+
+				@include atSmall {
+					margin-top: 2rem;
+				}
+			}
+
+			ul.bullet-list > li {
+				list-style: disc;
+				margin-top: 2.5rem;
+				@include atSmall {
+					margin-top: 1.5rem;
+				}
+			}
+		}
+
+		.image {
+			width: 37.7rem;
+			flex-shrink: 0;
+
+			@include atLarge {
+				width: 24rem;
+				height: 46.5rem;
+			}
+
+			@include atMedium {
+				width: 22rem;
+			}
+
+			@include atSmall {
+				width: 18.3rem;
+				height: 39.6rem;
+				align-self: flex-start;
+			}
+		}
+	}
+}

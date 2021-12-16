@@ -1,0 +1,55 @@
+.wever-records {
+	background-color: $bggray;
+	margin-top: 11rem;
+
+	@include atMedium {
+		margin-top: 8rem;
+	}
+	@include atSmall {
+		margin-top: 5rem;
+	}
+	ul {
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		padding: 6rem 8rem;
+
+		@include atMedium {
+			padding: 5rem 7rem;
+		}
+		@include atSmall {
+			padding: 3.5rem 3rem;
+		}
+	}
+
+	.record {
+		color: $primary;
+	}
+
+	.number {
+		font-size: 6.4rem;
+		font-weight: 700;
+		padding-left: 15px;
+
+		@include atMedium {
+			font-size: 3.6rem;
+		}
+		@include atSmall {
+			font-size: 2.4rem;
+		}
+
+		&::after {
+			content: '%';
+			font-size: 2.5rem;
+			margin-left: 3px;
+			font-weight: 400;
+
+			@include atMedium {
+				font-size: 1.4rem;
+			}
+			@include atSmall {
+				font-size: 1.1rem;
+			}
+		}
+	}
+}

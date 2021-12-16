@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	/* 1rem = 10px */
+	font-size: 62.5%;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Inter', 'Open Sans', 'Roboto', sans-serif;
+	color: #333;
+	min-height: calc(var(--vh, 1vh) * 100);
+	font-size: 1.6rem;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+::selection {
+	background: rgba(160, 114, 33, 0.32);
+	text-shadow: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+button {
+	background-color: transparent;
+	color: inherit;
+	border-width: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='search'],
+input[type='submit'],
+input[type='tel'],
+input[type='url'],
+[type='textarea'],
+textarea {
+	border-radius: 0;
+	-webkit-appearance: none;
+	outline: none;
+}
+
+input[type='text'],
+input[type='password'] {
+	padding-left: 10px;
+}

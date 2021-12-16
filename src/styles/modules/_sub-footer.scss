@@ -1,0 +1,17 @@
+.sub-footer {
+	padding: 15rem 0;
+	@include atMedium {
+		padding: 10rem 0;
+	}
+
+	& > p {
+		margin-top: 2rem;
+
+		@include atMedium {
+			margin-top: 1.2rem;
+		}
+		@include atSmall {
+			margin-top: 1rem;
+		}
+	}
+}

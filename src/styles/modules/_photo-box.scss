@@ -1,0 +1,79 @@
+.photo-box {
+	display: flex;
+	flex-direction: column;
+
+	&-image {
+		width: 12rem;
+		height: 12rem;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-bottom: 1.5rem;
+
+		@include atMedium {
+			width: 10rem;
+			height: 10rem;
+			margin-bottom: 1.3rem;
+		}
+
+		@include atSmall {
+			width: 8rem;
+			height: 8rem;
+			margin-bottom: 1rem;
+		}
+
+		& > img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&--lg .photo-box-image {
+		width: 16rem;
+		height: 16rem;
+		margin-bottom: 3rem;
+
+		@include atMedium {
+			width: 10rem;
+			height: 10rem;
+			margin-bottom: 1.3rem;
+		}
+
+		@include atSmall {
+			width: 8rem;
+			height: 8rem;
+			margin-bottom: 1rem;
+		}
+
+		& > img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&--sm .photo-box-image {
+		width: 10rem;
+		height: 10rem;
+
+		@include atMedium {
+			width: 8rem;
+			height: 8rem;
+			margin-bottom: 1.3rem;
+		}
+
+		@include atSmall {
+			width: 6rem;
+			height: 6rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&-title {
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	&-desc {
+		display: flex;
+		flex-direction: column;
+	}
+}

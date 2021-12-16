@@ -1,0 +1,36 @@
+$black: #1a1a1a;
+$white: #fffbf2;
+$darkgray: #505050;
+$midgray: #767676;
+$lightgray: #999999;
+$linegray: #dedede;
+$bggray: #f8f8f8;
+$primary: #3a3328;
+$secondary: #928c7a;
+$point: #d09c36;
+
+:root {
+	--header-height: 100px;
+	--layout-max-width: 1310px;
+	--layout-margin: 3rem;
+}
+
+@include atLarge {
+	:root {
+		--header-height: 100px;
+	}
+}
+
+@include atMedium {
+	:root {
+		--header-height: 80px;
+		--layout-margin: 3rem;
+	}
+}
+
+@include atSmall {
+	:root {
+		--header-height: 60px;
+		--layout-margin: 2rem;
+	}
+}

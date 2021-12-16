@@ -1,0 +1,67 @@
+.wow-slider {
+	width: 100%;
+
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__image {
+		width: 7rem;
+		height: 7rem;
+		border-radius: 3.5rem;
+		overflow: hidden;
+
+		& > img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		margin: 1rem 0 0.7rem;
+	}
+
+	&__desc {
+		font-size: 1.1rem;
+		color: $midgray;
+		line-height: 1.4;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.wow-slider-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide {
+	background: #fff;
+}
+
+.wow-slider-btn-next,
+.wow-slider-btn-prev {
+	position: relative;
+	top: -100px;
+	margin-top: 0;
+	z-index: 10;
+	display: block;
+	width: 38px;
+	height: 38px;
+}
+.wow-slider-btn-next {
+	float: right;
+	transform: translateX(30px);
+	background-image: url('../images/icons/arrow_big_right.svg');
+}
+.wow-slider-btn-prev {
+	float: left;
+	transform: translateX(-30px);
+	background-image: url('../images/icons/arrow_big_left.svg');
+}

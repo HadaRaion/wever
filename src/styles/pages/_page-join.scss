@@ -1,0 +1,71 @@
+.join {
+	&__banner {
+		background-color: $bggray;
+		height: 68rem;
+
+		@include atLarge {
+			height: 50rem;
+		}
+
+		@include atMedium {
+			height: auto;
+			padding: 7rem 0;
+		}
+
+		& > .container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 100%;
+
+			@include atMedium {
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+	}
+	&__text {
+		transform: translateY(-30px);
+		@include atMedium {
+			transform: translateY(0px);
+			text-align: center;
+		}
+
+		& > p {
+			line-height: 1.4;
+			margin-top: 1rem;
+			margin-right: 14rem;
+
+			@include atMedium {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+
+		@include atMedium {
+			margin-top: 7rem;
+		}
+
+		li:first-child {
+			margin-right: 4rem;
+
+			@include atSmall {
+				margin-right: 2rem;
+			}
+		}
+
+		&__img {
+			width: 200px;
+			height: 280px;
+			background-color: gray;
+
+			@include atSmall {
+				width: 150px;
+				height: 215px;
+			}
+		}
+	}
+}

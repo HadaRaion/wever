@@ -1,0 +1,101 @@
+.btn {
+	width: 20rem;
+	height: 4rem;
+	display: flex;
+	background-color: #fff;
+	color: $black;
+	justify-content: center;
+	font-weight: 700;
+
+	@include atSmall {
+		width: 15rem;
+		height: 3.6rem;
+	}
+
+	& > a {
+		display: flex;
+		align-items: center;
+		transform: translateX(6px);
+
+		@include atMedium {
+			font-size: 1.2rem;
+		}
+		@include atSmall {
+			font-size: 1rem;
+		}
+	}
+
+	& > a::after {
+		content: '';
+		display: block;
+		width: 24px;
+		height: 24px;
+		background-image: url('../images/icons/button_arrow.svg');
+
+		background-size: cover;
+		transition: all 0.2s ease;
+
+		@include atMedium {
+			width: 18px;
+			height: 18px;
+		}
+		@include atSmall {
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	& > a:hover::after {
+		transform: translateX(5px);
+	}
+
+	&--black {
+		background-color: $black;
+
+		& > a {
+			color: #fff;
+		}
+
+		& > a::after {
+			background-image: url('../images/icons/button_arrow-white.svg');
+		}
+	}
+}
+
+.btn-sm {
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+
+	@include atMedium {
+		font-size: 1.2rem;
+		line-height: 18px;
+	}
+	@include atSmall {
+		font-size: 1rem;
+		line-height: 14px;
+	}
+
+	&::after {
+		content: '';
+		width: 24px;
+		height: 24px;
+		margin-left: 5px;
+		background-image: url('../images/icons/arrow_long_right.svg');
+		background-size: cover;
+		transition: all 0.2s ease;
+
+		@include atMedium {
+			width: 18px;
+			height: 18px;
+		}
+		@include atSmall {
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	&:hover::after {
+		margin-left: 10px;
+	}
+}
