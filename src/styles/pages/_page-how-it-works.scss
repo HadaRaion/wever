@@ -1,4 +1,8 @@
 .how-it-works {
+	@include atSmall {
+		h6 {
+		}
+	}
 	&__detail {
 	}
 
@@ -18,32 +22,36 @@
 
 			&:nth-child(even) > .text {
 				order: 2;
+
+				@include atSmall {
+					order: 0;
+				}
 			}
 
 			&:nth-child(even) > .image {
 				margin-right: 10rem;
 				@include atSmall {
-					margin: 2rem 0;
+					margin: 3rem 0;
 				}
 			}
 
 			&:nth-child(odd) > .image {
 				margin-left: 10rem;
 				@include atSmall {
-					margin: 2rem 0;
+					margin: 3rem 0;
 				}
 			}
 		}
 
 		.text {
-			color: $darkgray;
-
 			@include atSmall {
-				order: 2;
+				// order: 2;
 			}
 
 			h2 {
-				color: $black;
+				@include atSmall {
+					margin: 2rem 0 0.5rem;
+				}
 			}
 
 			h4 {
@@ -55,7 +63,7 @@
 				}
 
 				@include atSmall {
-					margin: 2rem 0;
+					margin: 1.5rem 0;
 				}
 			}
 
@@ -67,7 +75,7 @@
 				}
 
 				@include atSmall {
-					margin-bottom: 0.2rem;
+					margin: 3rem 0 2rem;
 				}
 			}
 
@@ -78,12 +86,13 @@
 
 				@include atMedium {
 					margin-top: 3rem;
-					padding-inline-start: 20px;
-					font-size: 1rem;
+					padding-inline-start: 30px;
+					font-size: 1.4rem;
 				}
 
 				@include atSmall {
-					margin-top: 2rem;
+					margin-top: 0rem;
+					padding-left: 2rem;
 				}
 			}
 

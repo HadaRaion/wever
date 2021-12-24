@@ -1,0 +1,138 @@
+.site-footer__contents {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 1.6rem;
+
+	> div {
+		display: flex;
+		transform: translateY(30%);
+
+		@include atSmall {
+			transform: translateY(0);
+		}
+	}
+
+	&__logo {
+		width: 45%;
+
+		@include atMedium {
+			width: 30%;
+		}
+
+		@include atSmall {
+			display: none;
+		}
+	}
+
+	&__logo > img {
+		width: 180px;
+
+		@include atMedium {
+			width: 120px;
+		}
+	}
+
+	&__nav {
+		width: 55%;
+
+		@include atMedium {
+			width: 70%;
+		}
+		@include atSmall {
+			width: 100%;
+		}
+
+		ul {
+			display: flex;
+			@include atSmall {
+				flex-direction: column;
+			}
+		}
+
+		li {
+			width: 33.3333%;
+
+			@include atSmall {
+				width: 100%;
+				border-bottom: 1px solid $darkgray;
+				padding: 2rem 0 2rem;
+			}
+		}
+
+		nav {
+			display: flex;
+			flex-direction: column;
+			line-height: 2.3;
+			font-weight: 700;
+
+			@include atSmall {
+				flex-direction: row;
+				flex-wrap: wrap;
+
+				& > a {
+					width: 50%;
+				}
+			}
+		}
+
+		&__title {
+			color: $lightgray;
+			font-weight: 400;
+			letter-spacing: 0.01em;
+			padding-bottom: 0.5rem;
+
+			@include atSmall {
+				padding-bottom: 1.5rem;
+			}
+		}
+
+		&__social {
+			display: flex;
+
+			@include atSmall {
+				flex-direction: column;
+			}
+
+			& > div {
+				display: flex;
+			}
+
+			a {
+				display: block;
+				width: 20px;
+				height: 20px;
+				background-size: cover;
+				transform: translateY(8px);
+
+				@include atSmall {
+					transform: translateY(0px);
+				}
+			}
+
+			&__mail {
+				background-image: url('../images/icons/email.svg');
+				margin: 0 1.5rem;
+
+				@include atSmall {
+					margin: 0 1.5rem 0 0;
+				}
+			}
+
+			&__ig {
+				background-image: url('../images/icons/instagram.svg');
+			}
+		}
+
+		&__copyright {
+			margin-top: 7rem;
+			color: $lightgray;
+
+			@include atSmall {
+				font-size: 1.4rem;
+				margin-top: 6rem;
+				padding-bottom: 1rem;
+			}
+		}
+	}
+}

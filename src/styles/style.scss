@@ -2,9 +2,9 @@
 @import 'normalize.css';
 
 /* SASS and Global'ish Stuff */
-@import './base/global';
 @import './base/mixin';
 @import './base/variables';
+@import './base/global';
 @import './base/font-face';
 
 /* Common */
@@ -14,6 +14,7 @@
 @import './modules/container';
 @import './modules/site-header';
 @import './modules/site-footer';
+@import './modules/footer-contents';
 @import './modules/main';
 @import './modules/row';
 @import './modules/hamburger';

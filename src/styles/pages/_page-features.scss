@@ -11,7 +11,7 @@
 
 			@include atSmall {
 				flex-direction: column;
-				margin: 0;
+				margin: 2rem 0 0;
 			}
 		}
 
@@ -29,8 +29,10 @@
 				flex: 1;
 				margin: 0;
 
-				&:nth-child(2) {
-					/* margin-left: 10rem; */
+				padding: 1rem 0 4rem;
+				border-bottom: 1px solid $linegray;
+				&:last-child {
+					border-bottom: none;
 				}
 			}
 		}
@@ -38,51 +40,46 @@
 		&__title {
 			display: flex;
 			align-items: flex-end;
-			line-height: 0.7;
+			line-height: 2;
 
 			@include atMedium {
 				flex-direction: column;
 				align-items: flex-start;
-				line-height: 1.2;
+				line-height: 1.5;
 			}
 			@include atSmall {
 				flex-direction: row;
 				align-items: flex-end;
-				line-height: 0.7;
-			}
-
-			@include atSmall {
-				margin-top: 3rem;
+				line-height: 2;
 			}
 
 			& > .number {
-				font-size: 7.2rem;
+				font-size: 9rem;
 				margin-right: 1rem;
 
 				@include atMedium {
-					font-size: 6.4rem;
+					font-size: 7rem;
 					margin-right: 0;
-					margin-left: -0.5rem;
 				}
 
-				@include atMedium {
-					font-size: 3.6rem;
+				@include atSmall {
+					font-size: 4.6rem;
 					margin-right: 0.7rem;
-					margin-left: -0.2rem;
 				}
 			}
 		}
 
 		&__desc {
-			color: $midgray;
 			line-height: 1.6;
-			margin-top: 3rem;
+			margin-top: 2rem;
 
 			@include atMedium {
 				margin-top: 1rem;
 			}
 
 			@include atSmall {
+				font-size: 1.5rem;
+				margin-top: 0.3rem;
 				.break-line {
 					display: inline;
 				}
@@ -98,7 +95,7 @@
 			padding: 7rem 0;
 		}
 		@include atSmall {
-			padding: 5rem 0;
+			padding: 7rem 0;
 		}
 	}
 	.middle-banner {
@@ -119,15 +116,14 @@
 		&__text {
 			@include atSmall {
 				order: 2;
-				margin-top: 2rem;
+				margin-top: 2.5rem;
 			}
 
 			h5 {
 				margin-top: 6rem;
-				color: $midgray;
-				font-weight: 500;
+
 				@include atSmall {
-					margin-top: 1rem;
+					margin-top: 2.5rem;
 				}
 			}
 		}
@@ -170,7 +166,7 @@
 			}
 
 			@include atSmall {
-				margin: 0 -20px 6rem;
+				margin: 0 -20px 8rem;
 			}
 		}
 
@@ -201,6 +197,18 @@
 			& > li {
 				margin-top: 6rem;
 
+				&:first-child {
+					margin-top: 3rem;
+
+					@include atMedium {
+						margin-top: 4rem;
+					}
+
+					@include atSmall {
+						margin-top: 3rem;
+					}
+				}
+
 				@include atMedium {
 					margin-top: 4rem;
 					flex: 0 0 calc(50% - 40px);
@@ -209,20 +217,11 @@
 				}
 
 				@include atSmall {
-					margin-top: 2rem;
-				}
-
-				&:first-child {
 					margin-top: 3rem;
-					@include atSmall {
-						margin-top: 2rem;
-					}
 				}
 			}
 
 			h5 {
-				color: $midgray;
-				font-weight: 500;
 				margin-top: 0.5rem;
 				@include atSmall {
 					margin-top: 0.2rem;

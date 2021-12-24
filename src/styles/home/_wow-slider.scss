@@ -20,16 +20,23 @@
 
 	&__title {
 		font-weight: 700;
-		margin: 1rem 0 0.7rem;
+		margin: 1.3rem 0 1rem;
 	}
 
 	&__desc {
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 		color: $midgray;
 		line-height: 1.4;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		@include atMedium {
+			font-size: 1.2rem;
+		}
+
+		@include atSmall {
+		}
 	}
 }
 .wow-slider-slide {
@@ -54,14 +61,35 @@
 	display: block;
 	width: 38px;
 	height: 38px;
+	background-size: cover;
+	@include atSmall {
+		width: 30px;
+		height: 30px;
+	}
 }
 .wow-slider-btn-next {
 	float: right;
 	transform: translateX(30px);
 	background-image: url('../images/icons/arrow_big_right.svg');
+
+	@include atMedium {
+		transform: translateX(20px);
+	}
+
+	@include atSmall {
+		transform: translateX(15px);
+	}
 }
 .wow-slider-btn-prev {
 	float: left;
 	transform: translateX(-30px);
 	background-image: url('../images/icons/arrow_big_left.svg');
+
+	@include atMedium {
+		transform: translateX(-20px);
+	}
+
+	@include atSmall {
+		transform: translateX(-15px);
+	}
 }

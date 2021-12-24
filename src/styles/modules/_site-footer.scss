@@ -1,7 +1,8 @@
 .site-footer {
 	position: relative;
 	width: 100%;
-	height: calc(var(--vh, 1vh) * 100 - var(--header-height));
+	min-height: calc(var(--vh, 1vh) * 100 - var(--header-height));
+	color: #fff;
 
 	&__video {
 		position: absolute;
@@ -31,23 +32,13 @@
 		z-index: 3;
 		width: 100%;
 		height: 100%;
-		display: flex;
-		flex-direction: column;
-
-		& > img {
-			width: 180px;
-
-			@include atMedium {
-				width: 120px;
-			}
-		}
 	}
 
 	.footer-slogan {
-		color: #fff;
-		font-size: 1.5rem;
+		color: $lightgray;
+		font-size: 1.3rem;
 		font-weight: 300;
-		margin-top: 2.5rem;
+		margin-top: 1.5rem;
 
 		@include atMedium {
 			font-size: 1rem;

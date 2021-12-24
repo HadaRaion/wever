@@ -18,10 +18,10 @@
 		transform: translateX(6px);
 
 		@include atMedium {
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 		}
 		@include atSmall {
-			font-size: 1rem;
+			font-size: 1.3rem;
 		}
 	}
 
@@ -68,11 +68,11 @@
 	align-items: center;
 
 	@include atMedium {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		line-height: 18px;
 	}
 	@include atSmall {
-		font-size: 1rem;
+		font-size: 1.2rem;
 		line-height: 14px;
 	}
 

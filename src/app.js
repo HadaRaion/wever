@@ -1,6 +1,7 @@
 import './styles/style.scss';
 import MobileMenu from './scripts/MobileMenu';
 import './scripts/Swiper';
+
 new MobileMenu();
 
 window.addEventListener('load', () => {

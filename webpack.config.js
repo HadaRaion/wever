@@ -18,7 +18,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].[contenthash].bundle.js',
-		// assetModuleFilename: 'images/[name][ext]',
+		assetModuleFilename: 'images/[name][ext]',
 		clean: true, // delete old file
 	},
 	devtool: 'source-map',
@@ -53,11 +53,7 @@ module.exports = {
 			{
 				test: /\.(png|ico|jpe?g|gif|svg)$/i,
 				type: 'asset/resource',
-				generator: {
-					filename: './image/[name][ext]',
-				},
 			},
-
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,

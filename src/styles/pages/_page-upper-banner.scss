@@ -14,7 +14,8 @@
 	}
 
 	@include atSmall {
-		height: 46rem;
+		height: auto;
+		padding: 5rem 0;
 		margin-bottom: 9rem;
 	}
 
@@ -37,9 +38,14 @@
 			order: 2;
 			text-align: center;
 		}
+
+		h1 {
+			@include atSmall {
+				margin: 2rem 0 1rem;
+			}
+		}
 		& > p {
 			color: #fff;
-			line-height: 1.6;
 
 			@include atLarge {
 				max-width: 600px;
@@ -61,10 +67,8 @@
 		margin-left: 4rem;
 
 		@include atLarge {
-			width: 24rem;
-			height: 46.5rem;
+			width: 26rem;
 			margin-left: 2rem;
-			transform: translateY(3rem);
 		}
 
 		@include atMedium {
@@ -72,7 +76,7 @@
 		}
 
 		@include atSmall {
-			width: 18.3rem;
+			width: 18rem;
 			margin-left: 0;
 			transform: translateY(0);
 		}
