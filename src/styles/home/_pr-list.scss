@@ -36,10 +36,6 @@
 
 			@include atLarge {
 				margin-top: 1rem;
-
-				/* & > .break-line {
-					display: inline;
-				} */
 			}
 
 			@include atSmall {

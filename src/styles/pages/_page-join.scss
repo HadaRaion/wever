@@ -1,6 +1,5 @@
 .join {
 	&__banner {
-		background-color: $bggray;
 		height: 68rem;
 
 		@include atLarge {
@@ -68,7 +67,6 @@
 		&__img {
 			width: 200px;
 			height: 280px;
-			background-color: gray;
 
 			@include atSmall {
 				width: 150px;

@@ -1,11 +1,4 @@
 .how-it-works {
-	@include atSmall {
-		h6 {
-		}
-	}
-	&__detail {
-	}
-
 	&__list {
 		& > li {
 			display: flex;
@@ -44,10 +37,6 @@
 		}
 
 		.text {
-			@include atSmall {
-				// order: 2;
-			}
-
 			h2 {
 				@include atSmall {
 					margin: 2rem 0 0.5rem;

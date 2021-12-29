@@ -4,7 +4,6 @@ $bar-spacing: 10px;
 
 .hamburger {
 	width: $bar-width;
-	// transform: translateY(-$bar-spacing);
 	height: $bar-height + $bar-spacing * 2;
 	cursor: pointer;
 	display: none;

@@ -44,6 +44,9 @@ if (memberSliderEl) {
 				spaceBetween: 50,
 			},
 		},
+		autoplay: {
+			delay: 2000,
+		},
 	});
 }
 
@@ -52,6 +55,9 @@ if (reviewSliderEl) {
 		pagination: {
 			el: '.review-slider-pagination',
 			clickable: true,
+		},
+		autoplay: {
+			delay: 3000,
 		},
 	});
 }

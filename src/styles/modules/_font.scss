@@ -32,20 +32,19 @@ p {
 	}
 }
 
-.banner-headline {
-	font-family: 'Trola', sans-serif;
-	font-size: 7rem;
-	line-height: 1.2;
+// .banner-headline {
+// 	font-family: 'Trola', sans-serif;
+// 	font-size: 7rem;
+// 	line-height: 1.2;
 
-	@include atLarge {
-		font-size: 5.2rem;
-	}
+// 	@include atLarge {
+// 		font-size: 5.2rem;
+// 	}
 
-	@include atSmall {
-		font-size: 4rem;
-		// margin: 0.67em 0 0.3em;
-	}
-}
+// 	@include atSmall {
+// 		font-size: 4rem;
+// 	}
+// }
 
 .serif {
 	font-family: 'geller-headline', serif;
