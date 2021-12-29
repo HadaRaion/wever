@@ -22,11 +22,14 @@
 		}
 	}
 	&__img {
-		/* width: 30%; */
 		width: 290px;
 		height: 180px;
 		background: gray;
 
+		img {
+			object-fit: cover;
+			max-width: unset;
+		}
 		/* &--wrapper {
 			position: relative;
 			display: block;
