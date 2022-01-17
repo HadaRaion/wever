@@ -1,1 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700');
+@font-face {
+	font-family: 'Trola';
+	src: url('../fonts/trola.woff2') format('woff2'), url('../fonts/trola.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}

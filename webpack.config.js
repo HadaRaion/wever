@@ -18,7 +18,10 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].[contenthash].bundle.js',
-		assetModuleFilename: 'images/[name][ext]',
+		assetModuleFilename: pathData => {
+			const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
+			return `${filepath}/[name].[hash][ext][query]`;
+		},
 		clean: true, // delete old file
 	},
 	devtool: 'source-map',
@@ -43,13 +46,10 @@ module.exports = {
 					'sass-loader',
 				],
 			},
-			// {
-			// 	test: /\.(woff|woff2)$/,
-			// 	type: 'asset/resource',
-			// 	generator: {
-			// 		filename: './fonts/[name][ext]',
-			// 	},
-			// },
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				type: 'asset/resource',
+			},
 			{
 				test: /\.(png|ico|jpe?g|gif|svg)$/i,
 				type: 'asset/resource',
